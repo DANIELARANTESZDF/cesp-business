@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 
 const assetBase = import.meta.env.BASE_URL
-const brandLogo = `${assetBase}cesp-business-logo.png`
+const brandLogo = `${assetBase}cesp-business-logo.svg`
 const brandMark = `${assetBase}cesp-business-mark.svg`
 const phoneDisplay = '(17) 99184-5380'
 const phoneHref = 'tel:+5517991845380'
