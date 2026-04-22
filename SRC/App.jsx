@@ -6,11 +6,14 @@ import {
   Clock3,
   FileText,
   Globe,
+  LineChart,
   Mail,
   MessageCircle,
   Phone,
+  Quote,
   Search,
   ShieldCheck,
+  ShoppingBag,
   ShoppingCart,
   Sparkles,
   Workflow,
@@ -94,6 +97,24 @@ const solutions = [
     title: '📍 Presença de Marca',
     description:
       'Domínio total do Google Meu Negócio, Criação de Logotipos, Banners e Máquina de Avaliações 5 estrelas.',
+  },
+]
+
+const testimonials = [
+  {
+    icon: ShoppingBag,
+    name: 'Anderson',
+    role: 'Fundador, CasaLúmina Outlet',
+    body:
+      'Mesmo sendo leigo em tecnologia, a clareza e a transparência do trabalho me deixaram muito tranquilo. A CESP Business não entregou apenas o que combinamos, eles foram muito além e criaram uma estrutura robusta para a minha loja. O resultado ficou tão bom que, antes mesmo de terminar, eu já separei um segundo projeto para fazermos juntos. Nível de profissionalismo altíssimo!',
+    highlight: 'Mockup de WhatsApp',
+  },
+  {
+    icon: LineChart,
+    name: 'Claudinei',
+    role: 'Fundador, GranilPiso Itajubá',
+    body:
+      'Confesso que achei que ia ser uma dor de cabeça sem fim colocar minha empresa na internet. O Daniel e a CESP Business não só entregaram o site em tempo recorde, como ficou super fácil de mexer. O melhor de tudo é que os clientes já estão me achando no Google e me chamando no Zap. Valeu cada centavo!',
   },
 ]
 
@@ -322,6 +343,95 @@ function App() {
                     <p className="mt-4 text-base leading-8 text-zinc-300">
                       {description}
                     </p>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </motion.section>
+
+        <motion.section {...reveal()} id="prova-social" className="pt-16 sm:pt-24">
+          <div className="mx-auto max-w-4xl text-center">
+            <span className="section-label justify-center">💬 Depoimentos de Quem Cresceu</span>
+            <h2 className="mt-6 font-display text-3xl font-semibold tracking-[-0.04em] text-zinc-50 sm:text-5xl">
+              Do papel para o lucro digital: Histórias de quem acelerou seu negócio conosco.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-zinc-300 sm:text-lg">
+              O nosso padrão de entrega não é apenas "fazer um site", é criar
+              máquinas de vendas reais e seguras para os donos de negócios locais.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {testimonials.map(({ icon: Icon, name, role, body, highlight }, index) => (
+              <motion.article
+                key={name}
+                {...reveal(0.08 + index * 0.08)}
+                className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#ffffff05] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:p-7"
+              >
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.12),transparent_30%)]" />
+
+                <div className="relative flex h-full flex-col gap-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-emerald-300 shadow-[0_0_30px_rgba(16,185,129,0.12)]">
+                      <Icon className="h-6 w-6" />
+                    </div>
+
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-zinc-200">
+                      <Quote className="h-5 w-5" />
+                    </div>
+                  </div>
+
+                  {highlight ? (
+                    <div className="overflow-hidden rounded-[28px] border border-white/10 bg-black/25 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                      <div className="rounded-[22px] border border-emerald-300/15 bg-[#0d1117] p-4">
+                        <div className="flex items-center justify-between border-b border-white/8 pb-3">
+                          <div>
+                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300/80">
+                              {highlight}
+                            </p>
+                            <p className="mt-1 text-sm text-zinc-300">Espaço reservado para o print image_18.png</p>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="h-2.5 w-2.5 rounded-full bg-rose-400/80" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+                          </div>
+                        </div>
+
+                        <div className="mt-4 rounded-[20px] border border-white/8 bg-[#111b21] p-4">
+                          <div className="flex items-center gap-3">
+                            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-300">
+                              <ShoppingBag className="h-5 w-5" />
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-zinc-50">Anderson • CasaLúmina Outlet</p>
+                              <p className="text-xs text-zinc-400">Feedback via WhatsApp</p>
+                            </div>
+                          </div>
+
+                          <div className="mt-4 ml-auto max-w-[88%] rounded-[20px] rounded-tr-sm bg-emerald-500/15 px-4 py-3 text-sm leading-7 text-zinc-100 shadow-[0_12px_35px_rgba(16,185,129,0.1)]">
+                            Aqui entra o print real do WhatsApp para reforçar overdelivery e confiança.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
+
+                  <p className="text-base leading-8 text-zinc-200">
+                    "{body}"
+                  </p>
+
+                  <div className="mt-auto flex items-center gap-4 border-t border-white/10 pt-5">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6 text-cyan-300">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="font-display text-lg font-semibold tracking-[-0.03em] text-zinc-50">
+                        {name}
+                      </p>
+                      <p className="text-sm text-zinc-400">{role}</p>
+                    </div>
                   </div>
                 </div>
               </motion.article>
