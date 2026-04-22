@@ -15,8 +15,9 @@ import {
   Workflow,
 } from 'lucide-react'
 
-const brandLogo = '/cesp-business-logo.png'
-const brandMark = '/cesp-business-mark.svg'
+const assetBase = import.meta.env.BASE_URL
+const brandLogo = `${assetBase}cesp-business-logo.png`
+const brandMark = `${assetBase}cesp-business-mark.svg`
 const phoneDisplay = '(17) 99184-5380'
 const phoneHref = 'tel:+5517991845380'
 const whatsappUrl =
