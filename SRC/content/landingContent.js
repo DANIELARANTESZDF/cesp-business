@@ -28,7 +28,7 @@ export const whatsappNumberPlaceholder = '55DDDNUMERO'
 export const whatsappMessage = 'Olá, quero digitalizar minha empresa'
 export const whatsappUrl = `https://wa.me/${whatsappNumberPlaceholder}?text=${encodeURIComponent(whatsappMessage)}`
 export const localAuthority = 'Acelerando negócios em Itajubá e região.'
-export const whatsappProofAssetName = 'image_18.png'
+export const whatsappProofAssetName = 'image_18.svg'
 
 export const reveal = (delay = 0) => ({
   initial: { opacity: 0, y: 26 },
@@ -141,14 +141,19 @@ export const testimonials = [
     role: 'Fundador, CasaLúmina Outlet',
     body:
       'Mesmo sendo leigo em tecnologia, a clareza e a transparência do trabalho me deixaram muito tranquilo. A CESP Business não entregou apenas o que combinamos, eles foram muito além e criaram uma estrutura robusta para a minha loja. O resultado ficou tão bom que, antes mesmo de terminar, eu já separei um segundo projeto para fazermos juntos. Nível de profissionalismo altíssimo!',
-    highlight: 'Mockup de WhatsApp',
+    highlight: 'Feedback via WhatsApp',
+    proofImage: `${assetBase}image_18.svg`,
+    proofAlt: 'Simulação de conversa no WhatsApp com elogio do Anderson para a CESP Business',
   },
   {
     icon: LineChart,
     quoteIcon: Quote,
     name: 'Claudinei',
-    role: 'Fundador, GranilPiso Itajubá',
+    role: 'Fundador, GranilPiso',
     body:
       'Confesso que achei que ia ser uma dor de cabeça sem fim colocar minha empresa na internet. O Daniel e a CESP Business não só entregaram o site em tempo recorde, como ficou super fácil de mexer. O melhor de tudo é que os clientes já estão me achando no Google e me chamando no Zap. Valeu cada centavo!',
+    highlight: 'Elogio pela velocidade e facilidade',
+    proofImage: `${assetBase}image_19.svg`,
+    proofAlt: 'Simulação de conversa no WhatsApp com elogio do Claudinei para a CESP Business',
   },
 ]
