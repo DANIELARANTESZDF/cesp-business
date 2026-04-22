@@ -1,16 +1,26 @@
-# React + Vite
+# CESP Business
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page institucional da CESP Business, desenvolvida com React, Vite e Tailwind CSS.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm install`
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
 
-## React Compiler
+## Deploy
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto está configurado para publicação no GitHub Pages via GitHub Actions.
 
-## Expanding the ESLint configuration
+- Base pública: `/cesp-business/`
+- Workflow: `.github/workflows/deploy.yml`
+- Saída publicada: `dist/`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Stack
+
+- React 19
+- Vite 8
+- Tailwind CSS 4
+- Framer Motion
+- Lucide React

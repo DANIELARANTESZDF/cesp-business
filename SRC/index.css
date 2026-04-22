@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+  --font-display: 'Sora', sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #09090b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.14), transparent 22%),
+    radial-gradient(circle at 82% 18%, rgba(16, 185, 129, 0.14), transparent 18%),
+    #09090b;
+  color: #f4f4f5;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 0.6px, transparent 0.6px);
+  background-size: 22px 22px;
+  opacity: 0.08;
+  mask-image: radial-gradient(circle at center, black 32%, transparent 85%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-[28px] border border-white/10 bg-white/[0.05] backdrop-blur-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_32px_90px_rgba(0,0,0,0.45)];
+  }
+
+  .brand-frame {
+    @apply rounded-[26px] border border-white/10 bg-black/25 p-3 backdrop-blur-xl;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.03),
+      0 20px 60px rgba(0, 0, 0, 0.32);
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-zinc-300;
+  }
+
+  .neon-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold text-zinc-950 transition duration-300;
+    background: linear-gradient(135deg, #10b981, #22d3ee);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 16px 60px rgba(16, 185, 129, 0.25),
+      0 8px 24px rgba(6, 182, 212, 0.18);
+  }
+
+  .neon-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 22px 70px rgba(16, 185, 129, 0.34),
+      0 10px 28px rgba(6, 182, 212, 0.24);
+  }
+
+  .ghost-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-white/[0.08];
+  }
+
+  .highlight-ring {
+    box-shadow:
+      0 0 0 1px rgba(16, 185, 129, 0.22),
+      0 0 40px rgba(16, 185, 129, 0.12);
+  }
+
+  .brand-glow {
+    filter: drop-shadow(0 14px 36px rgba(240, 197, 108, 0.14));
+  }
+}
