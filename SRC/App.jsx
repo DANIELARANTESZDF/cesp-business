@@ -107,7 +107,7 @@ function App() {
               <img
                 src={brandLogo}
                 alt="CESP Business"
-                className="brand-glow hidden h-12 w-auto sm:block lg:h-14"
+                className="brand-glow hidden h-14 w-auto sm:block lg:h-16 xl:h-18"
               />
               <span className="brand-frame inline-flex items-center gap-3 sm:hidden">
                 <img src={brandMark} alt="" aria-hidden="true" className="h-9 w-9" />
@@ -396,7 +396,7 @@ function App() {
         <img
           src={brandLogo}
           alt="CESP Business"
-          className="brand-glow mx-auto h-20 w-auto max-w-[280px]"
+          className="brand-glow mx-auto h-24 w-auto max-w-[340px] sm:h-28 sm:max-w-[400px] lg:h-32 lg:max-w-[460px]"
         />
         <p className="mt-4 font-display text-base font-semibold text-zinc-100">
           CESP Business - Tecnologia e Estratégia.
