@@ -6,6 +6,7 @@ import {
   Clock3,
   FileText,
   Globe,
+  Mail,
   MessageCircle,
   Phone,
   Search,
@@ -20,6 +21,8 @@ const brandLogo = `${assetBase}cesp-business-logo.svg`
 const brandMark = `${assetBase}cesp-business-mark.svg`
 const phoneDisplay = '(17) 99184-5380'
 const phoneHref = 'tel:+5517991845380'
+const emailDisplay = 'administrativo@cespestagio.com.br'
+const emailHref = 'mailto:administrativo@cespestagio.com.br'
 const whatsappUrl =
   'https://wa.me/5517991845380?text=Ol%C3%A1%2C%20quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20para%20digitalizar%20minha%20empresa%20e%20vender%20mais.'
 
@@ -370,13 +373,23 @@ function App() {
                 Clique agora e agende um diagnóstico gratuito do seu negócio.
               </p>
 
-              <a
-                href={phoneHref}
-                className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-emerald-300 transition hover:text-emerald-200"
-              >
-                <Phone className="h-4 w-4" />
-                {phoneDisplay}
-              </a>
+              <div className="mt-5 flex flex-col items-center gap-3">
+                <a
+                  href={phoneHref}
+                  className="inline-flex items-center gap-2 text-base font-semibold text-emerald-300 transition hover:text-emerald-200"
+                >
+                  <Phone className="h-4 w-4" />
+                  {phoneDisplay}
+                </a>
+
+                <a
+                  href={emailHref}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-cyan-300 transition hover:text-cyan-200 sm:text-base"
+                >
+                  <Mail className="h-4 w-4" />
+                  {emailDisplay}
+                </a>
+              </div>
 
               <a
                 href={whatsappUrl}
@@ -409,6 +422,13 @@ function App() {
         >
           <Phone className="h-4 w-4" />
           {phoneDisplay}
+        </a>
+        <a
+          href={emailHref}
+          className="mt-3 inline-flex items-center gap-2 font-medium text-cyan-300 transition hover:text-cyan-200"
+        >
+          <Mail className="h-4 w-4" />
+          {emailDisplay}
         </a>
         <p className="mt-2">Transformando negócios locais com soluções digitais. Copyright 2026.</p>
       </footer>
